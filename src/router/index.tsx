@@ -1,2 +1,3 @@
-import Routers from "./router";
-export default Routers;
+import MainRouters from "./mainRouter";
+import AdminRouter from "./adminRouter";
+export { MainRouters, AdminRouter };
