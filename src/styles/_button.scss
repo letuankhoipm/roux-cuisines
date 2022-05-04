@@ -1,11 +1,20 @@
+@import "./_varibles.scss";
 .rx-button {
-  background-color: #744600;
+  background-color: $rx-primary;
   color: white;
   font-size: 20px;
   padding: 10px 40px;
   box-sizing: border-box;
   outline: none;
   overflow: hidden;
-  border: 1px solid #744600;
+  border: 1px solid $rx-primary;
   border-radius: 5px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: white;
+    color: $rx-primary;
+    transition-duration: 0.4s;
+  }
 }
