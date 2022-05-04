@@ -18,3 +18,14 @@
     transition-duration: 0.4s;
   }
 }
+
+.rx-button-outlined {
+  cursor: pointer !important;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 0;
+  font-size: 1.5rem;
+  padding: 80px 15px;
+  width: 10% !important;
+}

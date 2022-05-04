@@ -1,9 +1,9 @@
-import * as React from "react";
-const title = "React";
+import RxBanner from "@/components/rx-banner/RxBanner";
+
 function Home() {
   return (
-    <div className="container">
-      <h1>home works! {title}</h1>
+    <div className="rx-home-main">
+      <RxBanner></RxBanner>
     </div>
   );
 }

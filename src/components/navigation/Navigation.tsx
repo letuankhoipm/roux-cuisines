@@ -50,7 +50,7 @@ function Navigation() {
 
   return (
     <div className="rx-navbar-container">
-      <div className="rx-navbar py-2 ">
+      <div className="rx-navbar py-2 d-none">
         <div className="container">
           <div className="row">
             <div className="navbar navbar-expand-lg navbar-light">
@@ -65,7 +65,7 @@ function Navigation() {
               <div className="col-2 d-none d-lg-flex justify-content-start">
                 <img
                   className="rx-logo"
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo_w.png`}
                   alt="logo"
                 />
               </div>
@@ -86,15 +86,28 @@ function Navigation() {
                   <li className="rx-menu-item align-self-center">Recipe</li>
                   <li className="rx-menu-item align-self-center">Menu</li>
                   <li className="rx-menu-item align-self-center">Contact Us</li>
-                  <li className="rx-menu-item align-self-center">
-                    <button className="rx-button">Sign-in</button>
-                  </li>
                 </ul>
+              </div>
+              <div className="col-2 d-none d-lg-block">
+                {/* <img
+                  ref={logoRef}
+                  className="rx-logo"
+                  src={`${process.env.PUBLIC_URL}/assets/icons/arrow-left-solid.svg`}
+                  alt="logo"
+                /> */}
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* <div className="rx-nd-menu">
+        <img
+          ref={logoRef}
+          className="rx-logo"
+          src={`${process.env.PUBLIC_URL}/assets/icons/arrow-left-solid.svg`}
+          alt="logo"
+        />
+      </div> */}
       <div className="rx-main">
         <div
           ref={mobileRef}

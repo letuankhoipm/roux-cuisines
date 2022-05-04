@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+.rx-banner-wrapper {
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  background-image: url("../../../public/assets/images/rx_1.jpg");
+  background-size: cover;
+  background-position: center;
+  //   transform: translateY(-85px);
+
+  .rx-title {
+    font-family: "Cookie", cursive;
+    color: white;
+    font-size: 7rem;
+  }
+
+  .rx-arrow {
+    width: 20px;
+  }
+
+  .rx-sign {
+    width: 800px;
+    opacity: 0.1;
+  }
+}

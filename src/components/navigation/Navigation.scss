@@ -5,18 +5,17 @@
   height: 45px;
 }
 
+.rx-navbar {
+  background: rgba(32, 32, 32, 0.6) !important;
+}
+
 .rx-desktop-navbar {
   .rx-menu-item {
-    color: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 40px;
     font-size: 20px;
     cursor: pointer;
-
-    &:hover,
-    &:active {
-      color: #744600;
-    }
   }
 }
 
