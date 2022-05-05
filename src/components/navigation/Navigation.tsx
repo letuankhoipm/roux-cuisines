@@ -1,13 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import "./Navigation.scss";
-import { MainRouters } from "@/router/index";
-import { useRef } from "react";
+import RxAchor from "../rx-achor/RxAnchor";
+import { useEffect, useRef } from "react";
 
 function Navigation() {
   const navigate = useNavigate();
   const mobileRef = useRef(null);
   const arrowRef = useRef(null);
   const logoRef = useRef(null);
+
+  useEffect(() => {
+    console.log("render nav");
+  });
 
   let isStretch = false;
 
@@ -89,12 +93,12 @@ function Navigation() {
                 </ul>
               </div>
               <div className="col-2 d-none d-lg-block">
-                {/* <img
+                <img
                   ref={logoRef}
                   className="rx-logo"
                   src={`${process.env.PUBLIC_URL}/assets/icons/arrow-left-solid.svg`}
                   alt="logo"
-                /> */}
+                />
               </div>
             </div>
           </div>
@@ -108,7 +112,7 @@ function Navigation() {
           alt="logo"
         />
       </div> */}
-      <div className="rx-main">
+      <div className="rx-main d-sm-block d-lg-none">
         <div
           ref={mobileRef}
           className="rx-mobile-navbar d-flex align-items-center justify-content-end"
@@ -139,8 +143,8 @@ function Navigation() {
           </ul>
         </div>
       </div>
-
-      <MainRouters></MainRouters>
+      <RxAchor></RxAchor>
+      {/* <MainRouters></MainRouters> */}
     </div>
   );
 }

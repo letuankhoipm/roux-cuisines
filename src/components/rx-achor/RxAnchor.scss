@@ -1,0 +1,72 @@
+.rx-anchor-main {
+  .rx-vertical {
+    transition: 0.4s ease-in-out;
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 2px;
+    right: 5%;
+  }
+
+  .rx-chevron {
+    width: 30px;
+  }
+
+  .rx-circle {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+  }
+
+  .rx-sign {
+    width: 300px;
+  }
+
+  .rx-sign-logo {
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    padding: 40px 120px;
+    opacity: 0.7;
+  }
+
+  .rx-sidebar {
+    height: 100vh;
+    transition: 0.4s ease-in-out;
+    position: fixed;
+    width: 40vw;
+    background-color: #1c1c1c;
+    transform: translateX(250%);
+
+    .rx-list {
+      padding: 40px 120px;
+    }
+
+    .rx-menu-item {
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+      color: white;
+      font-weight: bold;
+      border-bottom: 1px solid transparent;
+      margin: 20px 0;
+      transition-duration: 0.4s;
+      text-align: right;
+      text-transform: uppercase;
+
+      &:hover {
+        transition-duration: 0.4s;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  .rx-visibility {
+    transition: 0.4s ease-in-out;
+    transform: translateX(150%);
+  }
+
+  .rx-anchor-visibility {
+    transition: 0.4s ease-in-out;
+    transform: translateX(-700px);
+  }
+}
