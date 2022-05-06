@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "./Navigation.scss";
+import "./RxNavigation.scss";
 import RxAchor from "../rx-achor/RxAnchor";
 import { useEffect, useRef } from "react";
 
@@ -9,9 +9,7 @@ function Navigation() {
   const arrowRef = useRef(null);
   const logoRef = useRef(null);
 
-  useEffect(() => {
-    console.log("render nav");
-  });
+  useEffect(() => {});
 
   let isStretch = false;
 

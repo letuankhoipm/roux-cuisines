@@ -1,14 +1,11 @@
-import React, { useEffect, useRef } from "react";
 import "./App.scss";
 import "@/styles/_main.scss";
-import Navigation from "@/components/navigation/Navigation";
-import { Observable } from "rxjs";
-import animateService from "./services/animate.service";
+import RxNavigation from "@/components/rx-navigation/RxNavigation";
 
 function App() {
   return (
     <div className="rx-app">
-      <Navigation></Navigation>
+      <RxNavigation></RxNavigation>
     </div>
   );
 }
