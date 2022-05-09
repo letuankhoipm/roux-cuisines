@@ -1,0 +1,22 @@
+.rx-about-us-main {
+  .rx-about-us {
+    height: 1000px;
+    background-image: url("../../../public/assets/images/ab.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .rx-content {
+    padding: 170px 150px;
+    .rx-title {
+      font-family: "Cookie", cursive;
+      color: white;
+      font-size: 7rem;
+    }
+
+    .rx-desc {
+      color: white;
+    }
+  }
+}

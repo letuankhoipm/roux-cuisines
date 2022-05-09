@@ -1,4 +1,7 @@
 .rx-cuisines-main {
+  position: relative;
+  z-index: -1;
+
   .rx-cuisines-img {
     padding: 100px 40px;
     width: 100%;
@@ -29,6 +32,16 @@
     p {
       text-align: center;
       width: 30%;
+    }
+  }
+
+  .rx-cover {
+    position: absolute;
+    left: 8%;
+    top: -10%;
+
+    img {
+      width: 90%;
     }
   }
 }

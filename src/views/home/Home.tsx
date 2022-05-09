@@ -1,3 +1,4 @@
+import RxAboutUs from "@/components/rx-about-us/RxAboutUs";
 import RxBanner from "@/components/rx-banner/RxBanner";
 import RxCuisines from "@/components/rx-cuisines/RxCuisines";
 import RxSulfate from "@/components/rx-sulfate/RxSulfate";
@@ -28,7 +29,8 @@ function Home() {
     <div className="rx-home-main">
       <RxBanner></RxBanner>
       <RxCuisines></RxCuisines>
-      <div className="container">
+      <RxAboutUs></RxAboutUs>
+      <div className="container-fluid">
         <RxSulfate>
           {data.map((d: any) => (
             <RxSulfateWrapper key={d.id} slot="template">

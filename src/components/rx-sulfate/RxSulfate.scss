@@ -4,6 +4,9 @@ $primary: blue;
 }
 
 .rx-sulfate {
+  position: relative;
+  z-index: 1;
+
   .rx-template {
     height: 100%;
     width: 100%;

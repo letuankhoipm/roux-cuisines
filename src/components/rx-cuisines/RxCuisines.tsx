@@ -3,6 +3,13 @@ import "./RxCuisines.scss";
 function RxCuisines() {
   return (
     <div className="rx-cuisines-main">
+      <div className="rx-cover">
+        <img
+          className="rx-cover-content"
+          src={`${process.env.PUBLIC_URL}/assets/images/a1.png`}
+          alt="cover_img"
+        />
+      </div>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
