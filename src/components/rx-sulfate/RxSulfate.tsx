@@ -81,9 +81,27 @@ function RxSulfate(props: RxSulfateChildrenProps) {
           </div>
         </div>
         <div className="rx-indicator"></div>
-        <div className="rx-navigation">
-          <button onClick={() => handleWraperEffect("prev")}>prev</button>
-          <button onClick={() => handleWraperEffect("next")}>next</button>
+        <div className="rx-navigation justify-content-between d-flex">
+          <button
+            className="rx-prev"
+            onClick={() => handleWraperEffect("prev")}
+          >
+            <img
+              className="rx-cover-content"
+              src={`${process.env.PUBLIC_URL}/assets/icons/chevron-left-solid.svg`}
+              alt="cover_img"
+            />
+          </button>
+          <button
+            className="rx-next"
+            onClick={() => handleWraperEffect("next")}
+          >
+            <img
+              className="rx-cover-content"
+              src={`${process.env.PUBLIC_URL}/assets/icons/chevron-right-solid.svg`}
+              alt="cover_img"
+            />
+          </button>
         </div>
       </RxSulfateProvider>
     </div>

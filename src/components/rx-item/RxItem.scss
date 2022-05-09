@@ -1,0 +1,41 @@
+.rx-item {
+  .rx-item-main {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../../public/assets/images/bg.svg");
+  }
+
+  .rx-img {
+    height: 600px;
+    object-fit: contain;
+  }
+
+  .rx-illus {
+    padding: 200px 200px 200px 0;
+  }
+
+  .rx-gr-btn {
+    padding: 200px 0 200px 170px;
+  }
+
+  .rx-title {
+    padding: 0 200px;
+  }
+
+  .rx-content {
+    width: 700px;
+    padding: 20px;
+    background: rgba($color: #000000, $alpha: 0.3);
+    position: absolute;
+    top: 250px;
+    color: white;
+  }
+
+  .rx-sub-title {
+    padding: 0 200px;
+    h1 {
+      font-size: rem;
+    }
+  }
+}
