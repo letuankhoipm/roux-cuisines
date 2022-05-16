@@ -32,13 +32,40 @@ $primary: blue;
       .rx-item {
         height: 100%;
         width: 100%;
-        flex: 1 0 100%;
 
         img {
           width: 100%;
         }
       }
     }
+  }
+
+  .rx-sulfate-template {
+    height: 100%;
+  }
+
+  .rx-flex-default {
+    flex: 1 0 100%;
+  }
+
+  .rx-multi-1 {
+    flex: 0 0 100%;
+  }
+
+  .rx-multi-2 {
+    flex: 0 0 50%;
+  }
+
+  .rx-multi-3 {
+    flex: 0 0 33.33%;
+  }
+
+  .rx-multi-4 {
+    flex: 0 0 25%;
+  }
+
+  .rx-multi-5 {
+    flex: 0 0 20%;
   }
 
   .rx-navigation {

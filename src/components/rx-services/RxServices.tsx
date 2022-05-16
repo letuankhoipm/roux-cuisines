@@ -1,3 +1,4 @@
+import { RxSulfateConfig, RxSulfateMode } from "@/types/rx-sulfate.type";
 import RxItem from "../rx-item/RxItem";
 import RxSulfate from "../rx-sulfate/RxSulfate";
 import RxSulfateWrapper from "../rx-sulfate/RxSulfateWrapper";
@@ -25,13 +26,18 @@ function RxServices() {
       src: `${process.env.PUBLIC_URL}/assets/images/f4.png`,
     },
   ];
+
+  const config: RxSulfateConfig = {
+    items: 1,
+    mode: RxSulfateMode.FULL_SCREEN,
+  };
   return (
     <div className="rx-sevices mt-4 pt4">
       <div className="container">
         <h1 className=" rx-cookie rx-7rem">Service</h1>
       </div>
       <div className="container-fluid">
-        <RxSulfate>
+        <RxSulfate config={config}>
           {data.map((d: any) => (
             <RxSulfateWrapper key={d.id} slot="template">
               <RxItem id={d.id} title={d.title} src={d.src}></RxItem>

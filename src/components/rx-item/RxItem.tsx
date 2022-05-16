@@ -12,7 +12,7 @@ interface RxItemProps {
 
 function RxItem(props: RxItemProps) {
   return (
-    <div className="rx-item">
+    <div className="rx-item-spec">
       <div className="rx-item-main">
         <div className="rx-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -1,5 +1,5 @@
 import "./RxSulfate.scss";
-import { RxSulfateChildrenProps } from "@/types/rx-sulfate.type";
+import { RxSulfateChildrenProps, RxSulfateMode } from "@/types/rx-sulfate.type";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import RxSulfateProvider from "./RxSulfateProvider";
@@ -12,35 +12,48 @@ function RxSulfate(props: RxSulfateChildrenProps) {
   const [maxWidth, setMaxWidth] = useState(0);
   const [currPosition, setCurrPosition] = useState(initPosition);
   const [offsetWidth, setOffsetWidth] = useState(0);
+
+  const { children, config } = props;
+  const wrapperRef = useRef(null);
+
   let applidStyleValue = { transform: `translateX(${styleState})` };
   let templateRendered: any = [];
-  const { children } = props;
-
-  if (children) {
-    templateRendered = children.map((child: any, index: number) => (
-      <div key={index} className="rx-item">
-        {child}
-      </div>
-    ));
-  }
 
   const getOffsetWidth = useCallback(() => {
     let offsetWidth = 0;
     const refDiv: any = wrapperRef.current;
     if (!refDiv) return;
     offsetWidth = parseInt(refDiv.offsetWidth);
-    setOffsetWidth(offsetWidth);
-    setMaxWidth(offsetWidth * (childLenDefault - 1));
-  }, [childLenDefault]);
 
-  useEffect(() => {
-    console.log(currPosition, -maxWidth);
-    getOffsetWidth();
+    const itemWidth = offsetWidth / config.items;
+    setOffsetWidth(itemWidth);
+    setMaxWidth(itemWidth * (childLenDefault - 1));
+  }, [childLenDefault, config]);
 
-    setStyleState(`${currPosition}px`);
-  }, [currPosition, getOffsetWidth, maxWidth]);
+  const renderSlide = useCallback(
+    (renderMode: RxSulfateMode) => {
+      const renderClass = `rx-item rx-multi-${config.items}`;
 
-  const wrapperRef = useRef(null);
+      const renderedStyle = {
+        height: `${config.height}px`,
+      };
+
+      if (renderMode) {
+        return children.map((child: any, index: number) => (
+          <div key={index} className="rx-item rx-flex-default">
+            {child}
+          </div>
+        ));
+      } else {
+        return children.map((child: any, index: number) => (
+          <div key={index} style={renderedStyle} className={renderClass}>
+            {child}
+          </div>
+        ));
+      }
+    },
+    [children, config]
+  );
 
   const handleWraperEffect = (state: string) => {
     if (state === "next" && currPosition > -maxWidth) {
@@ -62,12 +75,25 @@ function RxSulfate(props: RxSulfateChildrenProps) {
     return currPosition;
   };
 
+  const configInitSlider = useCallback(() => {
+    const { mode } = config;
+    if (!children) return;
+    return renderSlide(mode);
+  }, [config, children, renderSlide]);
+
+  templateRendered = configInitSlider();
+
+  useEffect(() => {
+    getOffsetWidth();
+    setStyleState(`${currPosition}px`);
+  }, [currPosition, getOffsetWidth, maxWidth, configInitSlider]);
+
   return (
     <div className="rx-sulfate">
       <RxSulfateProvider
         slots={{
           template: {
-            className: "rx-sulfate-template",
+            className: "rx-sulfate-template d-flex",
           },
         }}
       >
