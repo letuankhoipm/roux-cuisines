@@ -30,6 +30,7 @@ function RxServices() {
   const config: RxSulfateConfig = {
     items: 1,
     mode: RxSulfateMode.FULL_SCREEN,
+    navigate: true,
   };
   return (
     <div className="rx-sevices mt-4 pt4">

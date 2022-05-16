@@ -18,6 +18,7 @@ function RxSulfate(props: RxSulfateChildrenProps) {
 
   let applidStyleValue = { transform: `translateX(${styleState})` };
   let templateRendered: any = [];
+  let navigateStyle = {};
 
   const getOffsetWidth = useCallback(() => {
     let offsetWidth = 0;
@@ -29,6 +30,12 @@ function RxSulfate(props: RxSulfateChildrenProps) {
     setOffsetWidth(itemWidth);
     setMaxWidth(itemWidth * (childLenDefault - 1));
   }, [childLenDefault, config]);
+
+  const renderStyle = () => {
+    navigateStyle = {
+      display: config.navigate ? "inherit" : "none",
+    };
+  };
 
   const renderSlide = useCallback(
     (renderMode: RxSulfateMode) => {
@@ -88,6 +95,8 @@ function RxSulfate(props: RxSulfateChildrenProps) {
     setStyleState(`${currPosition}px`);
   }, [currPosition, getOffsetWidth, maxWidth, configInitSlider]);
 
+  renderStyle();
+
   return (
     <div className="rx-sulfate">
       <RxSulfateProvider
@@ -107,27 +116,29 @@ function RxSulfate(props: RxSulfateChildrenProps) {
           </div>
         </div>
         <div className="rx-indicator"></div>
-        <div className="rx-navigation justify-content-between d-flex">
-          <button
-            className="rx-prev"
-            onClick={() => handleWraperEffect("prev")}
-          >
-            <img
-              className="rx-cover-content"
-              src={`${process.env.PUBLIC_URL}/assets/icons/chevron-left-solid.svg`}
-              alt="cover_img"
-            />
-          </button>
-          <button
-            className="rx-next"
-            onClick={() => handleWraperEffect("next")}
-          >
-            <img
-              className="rx-cover-content"
-              src={`${process.env.PUBLIC_URL}/assets/icons/chevron-right-solid.svg`}
-              alt="cover_img"
-            />
-          </button>
+        <div style={navigateStyle}>
+          <div className="rx-navigation justify-content-between d-flex">
+            <button
+              className="rx-prev"
+              onClick={() => handleWraperEffect("prev")}
+            >
+              <img
+                className="rx-cover-content"
+                src={`${process.env.PUBLIC_URL}/assets/icons/chevron-left-solid.svg`}
+                alt="cover_img"
+              />
+            </button>
+            <button
+              className="rx-next"
+              onClick={() => handleWraperEffect("next")}
+            >
+              <img
+                className="rx-cover-content"
+                src={`${process.env.PUBLIC_URL}/assets/icons/chevron-right-solid.svg`}
+                alt="cover_img"
+              />
+            </button>
+          </div>
         </div>
       </RxSulfateProvider>
     </div>

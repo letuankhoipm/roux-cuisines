@@ -23,6 +23,7 @@ export interface RxSulfateConfig {
   height?: number;
   loop?: boolean;
   dots?: boolean;
+  navigate?: boolean;
   autoplay?: boolean;
   mode: RxSulfateMode;
 }

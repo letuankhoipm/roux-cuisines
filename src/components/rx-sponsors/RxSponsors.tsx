@@ -41,6 +41,7 @@ function RxSponsors() {
     items: 5,
     mode: RxSulfateMode.MULTIPLE,
     height: 250,
+    navigate: false,
   };
   return (
     <div className="rx-sponsor mt-4 pt4">
