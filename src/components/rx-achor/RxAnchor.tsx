@@ -72,12 +72,7 @@ function RxAchor() {
               <li className="rx-menu-item py-2" onClick={() => handleClick("")}>
                 Home
               </li>
-              <li
-                className="rx-menu-item py-2"
-                onClick={() => handleClick("about-us")}
-              >
-                About Us
-              </li>
+              <li className="rx-menu-item py-2">About Us</li>
               <li className="rx-menu-item py-2">Recipe</li>
               <li className="rx-menu-item py-2">Menu</li>
               <li className="rx-menu-item py-2">Contact Us</li>
