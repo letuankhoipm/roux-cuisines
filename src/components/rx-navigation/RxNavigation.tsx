@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./RxNavigation.scss";
 import RxAchor from "../rx-achor/RxAnchor";
 import { useEffect, useRef } from "react";
+import RxFooter from "../rx-footer/RxFooter";
 
 function Navigation() {
   const navigate = useNavigate();
@@ -142,6 +143,7 @@ function Navigation() {
         </div>
       </div>
       <RxAchor></RxAchor>
+      <RxFooter></RxFooter>
       {/* <MainRouters></MainRouters> */}
     </div>
   );
